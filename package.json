@@ -1,0 +1,23 @@
+{
+  "name": "perrin-ui-kit",
+  "version": "1.0.0",
+  "description": "可复用的控制台页面模板、样式变量和间距调节工具",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "exports": {
+    ".": "./src/spacing-control.js",
+    "./styles": "./src/styles.css",
+    "./tokens": "./src/tokens.css"
+  },
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/serve.mjs --dist",
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "node tests/browser-check.mjs"
+  },
+  "license": "MIT"
+}
