@@ -5,7 +5,7 @@
   --primary: #765e72; --primary-foreground: #fff; --success: #337557;
   --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px; --space-5: 24px; --space-6: 32px;
   --section-gap: 24px; --card-padding: 18px; --panel-padding: 20px;
-  --radius-control: 8px; --radius-card: 14px;
+  --radius-control: 8px; --radius-card: var(--radius-control);
 }
 :root[data-theme="dark"] {
   color-scheme: dark;

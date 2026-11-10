@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>我的资料 · Perrin UI Kit</title>
+  <link rel="stylesheet" href="../src/styles.css">
+  <script type="module" src="./search-first.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">跳到主要内容</a>
+  <div class="ui-app shell">
+    <aside class="sidebar">
+      <div class="brand">Perrin UI Kit</div>
+      <nav aria-label="示例导航">
+        <a href="../index.html">组件总览</a>
+        <button type="button" aria-current="page">我的资料</button>
+      </nav>
+    </aside>
+    <main class="main" id="content" tabindex="-1" aria-label="资料列表">
+      <form class="toolbar search-toolbar" role="search">
+        <label class="visually-hidden" for="keyword">按标题查找</label>
+        <input id="keyword" name="q" type="search" placeholder="按标题查找">
+        <div class="actions"><button class="primary">查找</button></div>
+      </form>
+      <div class="card-grid">
+        <article class="panel"><h2>课程笔记</h2><small>notes.txt</small></article>
+        <article class="panel"><h2>阅读清单</h2><small>reading.txt</small></article>
+      </div>
+      <p class="panel muted" id="empty" role="status" hidden>没有匹配的资料</p>
+    </main>
+  </div>
+</body>
+</html>

@@ -35,6 +35,7 @@ npm run preview    # 在本机预览 dist/
 | `src/spacing-control.js` | ES 模块间距控制器，支持按页面根元素隔离 |
 | `browser/perrin-spacing.user.js` | 无需模块环境的独立脚本，含脚本管理器元信息 |
 | `examples/minimal.html` | 新页面最小接入示例，可直接复制 |
+| `examples/search-first.html` | 导航标识当前页，内容区从搜索框和资料列表开始 |
 | `scripts/` | Node 原生构建与静态预览工具 |
 | `tests/` | 构建、服务边界与可选浏览器交互检查 |
 
@@ -71,13 +72,15 @@ spacing.set({section: 24, card: 20, grid: 16, controls: 8, form: 16});
 
 可选组件类：`page-head`、`sidebar`、`stats`、`panel`、`card-grid`、`control-grid`、`config-form`、`toolbar`、`actions`、`pager`、`message-workspace`。大于 768 px 使用桌面布局，较窄屏幕自动纵向排列。间距调节覆盖只在桌面宽度生效，保留手机默认布局。
 
+列表页的名称已在导航中显示时，可以省掉内容区的 `page-head`，让 `toolbar search-toolbar` 紧接在导航后面。为搜索框保留 `label`，需要时用 `visually-hidden` 隐藏视觉重复。卡片和控件默认同为 8px 圆角；需要区分时单独覆盖 `--radius-card`。
+
 修改 `src/tokens.css`，或在自己的样式中覆盖变量：
 
 ```css
 :root {
   --primary: #536f81;
   --bg: #f2f5f7;
-  --radius-card: 12px;
+  --radius-control: 8px;
   --section-gap: 24px;
   --card-padding: 20px;
 }
